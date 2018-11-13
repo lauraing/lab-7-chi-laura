@@ -23,3 +23,16 @@ We are asking: Is there a significant difference in recommended gun control acti
 Hey Laura, I made some changes to this document. Sea ya later!
 
 Sup Lauren! Looking gewd
+
+Laura: data wrangling and counts
+
+Chi-square: asks question: are proportions across groups so different that we actually think there's a sig diff between groups?
+
+```{r}
+
+get_guns <- gc_df %>% 
+  filter(gender != "NA", make_get_guns != "NA") %>% 
+  count(gender, make_get_guns) # within the gender column, count how many make_get_guns show up
+
+```
+
