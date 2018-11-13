@@ -1,0 +1,17 @@
+---
+title: "Gun Control Chi-Square"
+author: "Laura Ingulsrud"
+date: "11/13/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This: I'm Laura and I'm updating this markdown file here.
+
+```{r}
+
+```
+
