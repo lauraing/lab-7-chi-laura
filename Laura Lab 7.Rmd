@@ -32,7 +32,11 @@ Chi-square: asks question: are proportions across groups so different that we ac
 
 get_guns <- gc_df %>% 
   filter(gender != "NA", make_get_guns != "NA") %>% 
-  count(gender, make_get_guns) # within the gender column, count how many make_get_guns show up
+  count(gender, make_get_guns) %>% # within the gender column, count how many make_get_guns show up
+  spread(make_get_guns, n) %>% # different levels in the make_get_guns column are in separate columns by n
+  select(-gender)
+
+rownames(get_guns) <- c("Female", "Male") # take the get_guns dataframe and assign row names that are Male and Female
 
 ```
 
